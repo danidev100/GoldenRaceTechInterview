@@ -1,0 +1,28 @@
+.numbers {
+    width: 100%;
+    text-align: center;
+    padding: 10% 0%;
+
+    .number-buttons button {
+        margin: 0.2em;
+    }
+    
+    div:not(:last-child) {
+        margin-bottom: 5%;
+    }
+
+    .clear-section a {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: white;
+    }
+}
+
+div.result_container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-selected {
+    color: green;
+}

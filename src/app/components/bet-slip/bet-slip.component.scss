@@ -1,0 +1,41 @@
+.container {
+    .play-game {
+        margin: 5% 0%;
+        text-align: center;
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.bet {
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+    height: 200px;
+    
+    :last-child {
+        margin-top: 5%;
+    }
+
+    .options-selected button {
+        margin: 0.2em;
+    }
+
+    .option-selected button:disabled {
+        background-color: #CCCCCC;
+        color: #000000;
+    }
+
+    .multiplier label {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: gray;
+        margin: 0% 5%;
+    }
+
+    .multiplier button {
+        margin: 0% 5%;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="container">
+    <mat-card>
+        <div class="bet">
+            <div class="options-selected">
+                <button mat-mini-fab disabled color="accent" aria-label="Button mini for options selected"
+                    *ngFor="let btn of index">{{ btn }}</button>
+            </div>
+
+            <div class="multiplier">
+                <label>{{ multiplier }}x</label>
+                <mat-form-field class="full-width" appearance="outline">
+                    <input matInput placeholder="Input your bet" type="number" [(ngModel)]="inputValue">
+                </mat-form-field>
+                <button mat-raised-button color="primary" aria-label="Button Set Bet"
+                    (click)="readBet(inputValue)">Ok</button>
+            </div>
+        </div>
+    </mat-card>
+
+    <div class="play-game">
+        <h2>Total: ${{ totalBet }}</h2>
+        <button mat-raised-button color="primary" aria-label="Button play game" (click)="playGame()">Place bet</button>
+    </div>
+</div>

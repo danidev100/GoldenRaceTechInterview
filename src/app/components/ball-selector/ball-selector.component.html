@@ -1,0 +1,33 @@
+<div class="container">
+    <mat-card>
+        <div class="numbers" *ngIf="!resultBet">
+            <h3>Availiable Numbers</h3>
+            <div class="number-buttons">
+                <button mat-fab color="primary"
+                    [ngClass]="isPressed === number ? 'button-selected' : 'button-unselected'"
+                    *ngFor="let number of numbers" aria-label="Button number" (click)="selectNumber(number)">{{
+                    number }}</button>
+            </div>
+            <div class="clear-section">
+                <button mat-button color="basic" aria-label="Button Clear Selection" (click)="clearSelection()">Clear
+                    Selection</button>
+            </div>
+        </div>
+
+        <div class="result_container" *ngIf="resultBet">
+            <div class="results" *ngIf="resultBet.result">
+                <h3>Result</h3>
+                <button mat-fab color="primary" aria-label="Button results">{{ resultBet.value }}</button>
+                <h3>¡You win!</h3>
+                <mat-divider></mat-divider>
+                <h4>Your Bet: {{resultBet.totalBet}}</h4>
+                <h4>Total Bet with Profit: {{ resultBet.betProfit }}</h4>
+            </div>
+            <div class="results" *ngIf="!resultBet.result">
+                <h3>You Lose</h3>
+                <h4>Your Bet: {{resultBet.totalBet}}</h4>
+                <h4>Total you lost: {{ resultBet.totalBet }}</h4>
+            </div>
+        </div>
+    </mat-card>
+</div>
